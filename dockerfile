@@ -2,6 +2,8 @@ FROM node:alpine
 
 COPY package.json ./
 
+COPY server.js ./
+
 #the below command is what happens when you build the image
 RUN npm install
 
