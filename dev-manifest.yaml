@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samantha-api
+spec:
+  selector:
+    matchLabels:
+      app: samantha-api
+  template:
+    metadata:
+      labels:
+        app: samantha-api
+    spec:
+      containers:
+      - name: samantha-api
+        image: us-docker.pkg.dev/group3-iam-project/samantha-api/api-tests
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: ".25"
+            cpu: "250Mi"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+            scheme: HTTP
+          failureThreshold: 1
+          periodSeconds: 10
+          timeoutSeconds: 10
+        startupProbe:
+          httpGet:
+            path: /
+            port: 3000
+            scheme: HTTP
+          failureThreshold: 30
+          periodSeconds: 10
+          timeoutSeconds: 10
+        ports:
+        - containerPort: 3000
