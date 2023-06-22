@@ -16,11 +16,11 @@ spec:
         image: us-docker.pkg.dev/group3-iam-project/samantha-api/api-tests
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "500Mi"
+            cpu: ".5"
           requests:
-            memory: ".25"
-            cpu: "250Mi"
+            memory: "250Mi"
+            cpu: ".25"
         livenessProbe:
           httpGet:
             path: /
