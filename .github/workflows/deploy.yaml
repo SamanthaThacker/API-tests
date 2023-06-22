@@ -53,7 +53,7 @@ jobs:
     - name: Build
       run: |-
         docker build \
-          --tag "gcr.io/my-devops-team/sean-api:latest" \
+          --tag "gcr.io/group3-iam-project/samantha-api:latest" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
           .
