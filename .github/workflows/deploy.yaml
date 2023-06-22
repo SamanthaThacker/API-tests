@@ -61,7 +61,7 @@ jobs:
     # Push the Docker image to Google Container Registry
     - name: Publish
       run: |-
-        docker push "gcr.io/my-devops-team/sean-api:latest"
+        docker push "gcr.io/group3-iam-project/samantha-api:latest"
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
