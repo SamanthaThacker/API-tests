@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: samantha-api
-        image: us-docker.pkg.dev/group3-iam-project/samantha-api/api-tests
+        image: gcr.io/group3-iam-project/samantha-api
         resources:
           limits:
             memory: "500Mi"
